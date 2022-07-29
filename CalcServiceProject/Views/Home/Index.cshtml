@@ -1,0 +1,20 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Calc</h1>
+    a:<input id="first" type="number" name="name" value="" />
+    b:<input id="second" type="number" name="name" value="" />
+    <button onclick='Calc("Sum")'>Sum</button>
+    <button onclick='Calc("Sub")'>Sub</button>
+    <button onclick='Calc("Mul")'>Mul</button>
+    <button onclick='Calc("Div")'>Div</button>
+    <script>
+        function Calc(path) {
+            let a = document.querySelector("#first").value;
+            let b = document.querySelector("#second").value;
+            window.location.replace("/Calc/" + path +"/" + a + "/" + b);
+        }
+    </script>
+</div>
